@@ -1,5 +1,4 @@
 import { add } from '../utils'
-import { it, expect, describe } from 'vitest'
 
 describe('add', () => {
   it('add two number', () => {
