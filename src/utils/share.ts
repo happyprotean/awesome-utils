@@ -7,8 +7,8 @@
  * typeof undefined -> undefined
  * typeof {} -> object
  * typeof [] -> object
- * typeof () => {} -> object
- * typeof function(){} -> object
+ * typeof () => {} -> function
+ * typeof function(){} -> function
  * typeof '' -> string
  * typeof 1 -> number
  * typeof Symbol(1) -> symbol
@@ -27,4 +27,8 @@ export function isNull(value: any): boolean {
 
 export function isUndefined(value: any): boolean {
   return value === undefined
+}
+
+export function isFunction(value: any): boolean {
+  return typeof value === 'function'
 }

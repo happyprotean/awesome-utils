@@ -1,4 +1,4 @@
-import { isArray, isObject, isNull, isUndefined } from "../utils";
+import { isArray, isObject, isNull, isUndefined, isFunction } from "../utils";
 
 describe('share function', () => {
   it('isArray', () => {
@@ -46,5 +46,17 @@ describe('share function', () => {
     expect(isUndefined(function(){})).toBe(false) 
     expect(isUndefined(1)).toBe(false) 
     expect(isUndefined('')).toBe(false) 
+  })
+
+  it('isFuncion', () => {
+    expect(isFunction(null)).toBe(false) 
+    expect(isFunction(undefined)).toBe(false) 
+    expect(isFunction({})).toBe(false) 
+    expect(isFunction([])).toBe(false) 
+    expect(isFunction(new Array())).toBe(false) 
+    expect(isFunction(() => {})).toBe(true) 
+    expect(isFunction(function(){})).toBe(true) 
+    expect(isFunction(1)).toBe(false) 
+    expect(isFunction('')).toBe(false) 
   })
 })
