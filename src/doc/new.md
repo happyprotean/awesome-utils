@@ -40,3 +40,5 @@ console.log(instance_1.__proto__ === instance_2.__proto__)
 ## 带return
 
 当return Object/Function/Array/Date/RegExp/Error的实例，new操作符得到的就是return的结果
+
+此时，得到的实例和构造函数不存在原型链的关系
